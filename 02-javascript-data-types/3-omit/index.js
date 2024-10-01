@@ -8,9 +8,7 @@ export const omit = (obj, ...fields) => {
   const newKey = [...fields];
 
   const newObject = Object.entries(obj)
-  .filter(([key, value]) => {
-    if (!newKey.includes(key)) { return [key, value]; }
-  });
+  .filter(([key, value]) => !newKey.includes(key));
 
   return Object.fromEntries(new Map(newObject));
 };
