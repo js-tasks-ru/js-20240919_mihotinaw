@@ -11,7 +11,7 @@ export function sortStrings(arr, param = 'asc') {
     if (param === 'asc') {
       return a.localeCompare(b, locales);
     } else {
-      return  b.localeCompare(a, locales);
+      return b.localeCompare(a, locales);
     }
   });
 }
